@@ -13,18 +13,7 @@ const app = new Elysia()
     assets: "public",
     prefix: "",
   }))
-  .onError(({ code, error, set }) => {
-    if (code === "VALIDATION") {
-      set.status = 400;
-      return { success: false, message: "Validation error", errors: error.all };
-    }
-    if (code === "NOT_FOUND") {
-      set.status = 404;
-      return { success: false, message: "Route not found" };
-    }
-    set.status = 500;
-    return { success: false, message: error.message || "Internal server error" };
-  })
+  .get("/", () => Bun.file("public/index.html"))
   .get("/health", () => ({
     status: "ok",
     timestamp: new Date().toISOString(),

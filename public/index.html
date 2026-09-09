@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LuxeWax Studio - Professional & Painless Waxing Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">Luxe</span>Wax <span class="logo-sub">Studio</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Beranda</a></li>
+        <li><a href="#about">Tentang Kami</a></li>
+        <li><a href="#services">Layanan & Harga</a></li>
+        <li><a href="#testimonials">Testimoni</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+      <button class="btn btn-primary" onclick="openBookingModal()">
+        <i class="fa-solid fa-calendar-check"></i> Reservasi Online
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="badge"><i class="fa-solid fa-sparkles"></i> Premium Body Care & Waxing</span>
+        <h1>Nikmati Kulit Mulus, Halus & Bebas Bulu Lebih Lama</h1>
+        <p>Pengalaman waxing profesional dengan formula organic honey wax & hard wax kelas dunia. Lebih minim rasa sakit, steril, dan aman untuk kulit sensitif.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-lg" onclick="openBookingModal()">
+            <i class="fa-solid fa-calendar-alt"></i> Buat Janji Temu
+          </button>
+          <a href="#services" class="btn btn-outline btn-lg">
+            Lihat Layanan <i class="fa-solid fa-arrow-down"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">4.9★</span>
+            <span class="stat-label">Rating Pelanggan</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">5,000+</span>
+            <span class="stat-label">Pelanggan Puas</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Bahan Organik</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="image-wrapper">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="LuxeWax Treatment Room">
+          <div class="floating-card">
+            <i class="fa-solid fa-shield-heart"></i>
+            <div>
+              <strong>Hygiene Guaranteed</strong>
+              <span>Double-dipping policy 0%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="about" class="section bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Mengapa LuxeWax?</span>
+        <h2>Standar Kenyamanan & Kebersihan Tertinggi</h2>
+        <p>Kami memastikan setiap sesi treatment terasa seperti pengalaman spa relaksasi yang eksklusif.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>100% Organic Wax</h3>
+          <p>Diformulasikan khusus dari ekstrak madu asli dan ekstrak chamomile untuk meredakan kemerahan.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-user-nurse"></i></div>
+          <h3>Terapis Bersertifikasi</h3>
+          <p>Semua terapis memiliki lisensi profesional dan ahli dalam teknik waxing cepat minim rasa sakit.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-pump-soap"></i></div>
+          <h3>No Double Dipping</h3>
+          <p>Satu aplikator kayu untuk satu kali oles. Keamanan & sterilitas peralatan adalah prioritas nomor satu kami.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-spa"></i></div>
+          <h3>Ruangan Privat & Nyaman</h3>
+          <p>Kamar treatment personal dengan suasana rileks, aromaterapi lembut, dan musik penenang jiwa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Pricing -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Menu & Harga</span>
+        <h2>Layanan Waxing Favorit Kami</h2>
+        <p>Pilih area perawatan yang Anda inginkan dan pesan jadwal terbaik Anda hari ini.</p>
+      </div>
+
+      <div class="services-grid" id="servicesGrid">
+        <!-- Dynamically loaded via JavaScript -->
+        <div class="loading-spinner">
+          <i class="fa-solid fa-circle-notch fa-spin"></i> Memuat daftar layanan...
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-subtitle">Kata Pelanggan</span>
+        <h2>Apa Kata Mereka Tentang Kami?</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Pertama kali coba Brazilian Wax di LuxeWax, hasilnya benar-benar nggak sesakit yang kubayangkan! Terapisnya ramah banget dan tempatnya super bersih."</p>
+          <div class="user-info">
+            <strong>Siti Rahma</strong>
+            <span>Pelanggan Setia</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Underarm wax nya cepet banget, kulit ketiak rasanya lebih halus dan tumbuh bulunya jauh lebih lambat dibanding kalau dicukur."</p>
+          <div class="user-info">
+            <strong>Nadia Amanda</strong>
+            <span>Verified Customer</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Ambience salonnya enak banget, wangi aromaterapi. Booking online juga gampang banget nggak perlu antre lama di lokasi."</p>
+          <div class="user-info">
+            <strong>Clarissa Devi</strong>
+            <span>Verified Customer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <span class="section-subtitle">Lokasi & Jam Buka</span>
+          <h2>Kunjungi Studio Kami</h2>
+          <p>Siap untuk memiliki kulit mulus impian? Silakan datang langsung atau hubungi kami melalui kontak di bawah ini.</p>
+
+          <ul class="contact-details">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Alamat:</strong>
+                <span>Jl. Senopati No. 45, Kebayoran Baru, Jakarta Selatan</span>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Jam Operasional:</strong>
+                <span>Senin - Minggu: 09.00 - 20.00 WIB</span>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Telepon / WhatsApp:</strong>
+                <span>+62 812-3456-7890</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Chatvia WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <h3>Formulir Cepat Pertanyaan</h3>
+          <form id="contactForm" onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label>Nama Lengkap</label>
+              <input type="text" placeholder="Masukkan nama Anda" required>
+            </div>
+            <div class="form-group">
+              <label>Nomor WhatsApp</label>
+              <input type="tel" placeholder="08xxxxxxxxxx" required>
+            </div>
+            <div class="form-group">
+              <label>Pesan / Pertanyaan</label>
+              <textarea rows="4" placeholder="Ada pertanyaan mengenai layanan kami?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-accent">Luxe</span>Wax <span class="logo-sub">Studio</span>
+        </a>
+        <p>Solusi kecantikan kulit mulus tanpa rasa khawatir. Layanan waxing profesional terpercaya sejak 2022.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Ikuti Kami</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 LuxeWax Studio. Built with Bun + ElysiaJS + Drizzle.</p>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div class="modal" id="bookingModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-calendar-plus"></i> Reservasi Treatment Waxing</h3>
+        <button class="modal-close" onclick="closeBookingModal()">&times;</button>
+      </div>
+      <form id="bookingForm" onsubmit="handleBookingSubmit(event)">
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Pilih Layanan Waxing *</label>
+            <select id="bookingServiceSelect" required>
+              <option value="">-- Memuat Layanan --</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Tanggal Booking *</label>
+              <input type="date" id="bookingDate" required>
+            </div>
+            <div class="form-group">
+              <label>Jam Booking *</label>
+              <input type="time" id="bookingTime" min="09:00" max="19:00" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Nama Lengkap Pelanggan *</label>
+            <input type="text" id="customerName" placeholder="Contoh: Anisa Putri" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nomor WhatsApp *</label>
+              <input type="tel" id="customerPhone" placeholder="08123456789" required>
+            </div>
+            <div class="form-group">
+              <label>Email (Opsional)</label>
+              <input type="email" id="customerEmail" placeholder="nama@email.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Catatan Tambahan (Opsional)</label>
+            <textarea id="bookingNotes" rows="2" placeholder="Contoh: Kulit agak sensitif atau request terapis tertentu"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" onclick="closeBookingModal()">Batal</button>
+          <button type="submit" class="btn btn-primary" id="btnSubmitBooking">Konfirmasi Booking</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
